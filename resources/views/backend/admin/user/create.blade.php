@@ -40,7 +40,7 @@
                                         <label for="password" class="form-label">
                                             password <span class="text-danger">*</span>
                                         </label>
-                                        <input type="text" name="password" value="{{ old('password') }}"
+                                        <input type="password" name="password" value="{{ old('password') }}"
                                             placeholder="password"
                                             class="form-control @error('password') is-invalid @enderror">
                                         @error('password')

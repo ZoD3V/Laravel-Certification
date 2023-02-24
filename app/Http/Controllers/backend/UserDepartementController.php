@@ -19,14 +19,14 @@ class UserDepartementController extends Controller
     public function index()
     {
         $departement = user_department::all();
-        return view('backend.admin.user-departement.index', compact('departement'));
+        return view('backend.admin.userDepartement.index', compact('departement'));
     }
 
     public function create()
     {
         $user = User::all();
         $departement = department::all();
-        return view('backend.admin.user-departement.create', compact('user', 'departement'));
+        return view('backend.admin.userDepartement.create', compact('user', 'departement'));
     }
 
     public function show(User $user)
@@ -70,7 +70,7 @@ class UserDepartementController extends Controller
             $departement = department::all();
 
             if ($user_departement) {
-                return view('backend.admin.user-departement.edit', compact('user_departement', 'departement', 'user'));
+                return view('backend.admin.userDepartement.edit', compact('user_departement', 'departement', 'user'));
             } else {
                 return redirect()->route('b.manage.user')->with('error', "The #ID {$id} not found in Database!");
             }

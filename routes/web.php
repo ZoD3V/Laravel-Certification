@@ -5,6 +5,7 @@ use App\Http\Controllers\backend\DepartementController;
 use App\Http\Controllers\backend\StaffController;
 use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\backend\UserDepartementController;
+use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeController::class, 'index']);
+
 
 Auth::routes();
 
